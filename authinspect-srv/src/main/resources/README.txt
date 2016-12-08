@@ -1,0 +1,5 @@
+1. 采用ssh框架,采用注解配置,配置时添加classes/struts文件夹下的两个struts文件
+2.用户权限验证url在class文件夹下的authinspect_example.txt,已此为例
+3.authset.jsp中js引用正则和authset.js的src要改,webpro改成新的web项目的path
+4.本工程表单都采用post方式,若为get方式则一律不回复
+5.默认所有字段都无效时此用户纪录相当于被删除

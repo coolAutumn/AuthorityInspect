@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 是否启用开发模式 -->
+    <!--<constant name="struts.devMode" value="true" />-->
+
+    <!--（默认false）设置是否总是以自动装配策略创建对象-->
+    <constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" />
+    <package name="com.autumn.authcheck" extends="struts-default">
+
+    </package>
+    <include file="struts/struts-authlogin-manager.xml"/>
+    <include file="struts/struts-authset-manager.xml"/>
+</struts>

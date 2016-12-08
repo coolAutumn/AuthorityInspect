@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="com.autumn.authcheck.authsetandinspect.action" extends="struts-default" namespace="/">
+        <interceptors>
+            <interceptor name="loginauth" class="com.autumn.authcheck.interceptors.AuthorityInterceptor"/>
+        </interceptors>
+        <action name="addnewcus" class="com.autumn.authcheck.authsetandinspect.action.AuthAddNewCusAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <interceptor-ref name="token"/>
+            <result type="stream" name="invalid.token">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream1</param>
+            </result>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+        <action name="getallcus" class="com.autumn.authcheck.authsetandinspect.action.AuthGetAllCusAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+        <action name="getinfo" class="com.autumn.authcheck.authsetandinspect.action.AuthGetCusInfoAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+        <action name="authinsp" class="com.autumn.authcheck.authsetandinspect.action.AuthInspectAction">
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+        </action>
+        <action name="modsecsend" class="com.autumn.authcheck.authsetandinspect.action.ModPassAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+        <action name="modstore" class="com.autumn.authcheck.authsetandinspect.action.ModPassAction" method="passstore">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+        <action name="getMatch" class="com.autumn.authcheck.authsetandinspect.action.GetMatchCode" >
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+        <action name="delCus" class="com.autumn.authcheck.authsetandinspect.action.AuthDeleteCusAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="loginauth"/>
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="authfail">
+                /WEB-INF/content/authlogin/authlogin.jsp
+            </result>
+        </action>
+    </package>
+</struts>

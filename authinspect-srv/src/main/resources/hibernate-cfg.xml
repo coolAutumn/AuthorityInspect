@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- driver configuration -->
+        <!--<property name="dialect">org.hibernate.dialect.MySQLMyISAMDialect</property>-->
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <!-- properties -->
+        <property name="statement_cache.size">25</property>
+        <property name="jdbc.fetch_size">50</property>
+        <property name="jdbc.batch_size">50</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.format_sql">false</property>
+        <property name="use_sql_comments">true</property>
+        <!-- enable reconnect to database for a long time session -->
+        <property name="connection.autoReconnect">true</property>
+        <property name="connection.autoReconnectForPools">true</property>
+        <property name="connection.is-connection-validation-required">true</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/lab_project</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="net.leeautumn.authsetandinspect.model.UserInfoEntity"/>
+        <mapping class="net.leeautumn.authlogin.model.RootListEntity"/>
+        <!--使用本地事务-->
+        <!--<property name="current_session_context_class">thread</property>-->
+
+    </session-factory>
+</hibernate-configuration>

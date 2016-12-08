@@ -1,0 +1,48 @@
+body
+{
+    color: #9EA7B3 !important;
+    font-family: "Open Sans",Arial,sans-serif !important;
+    font-size: 13px !important;
+    line-height: 20px;
+    overflow-x: hidden !important;
+    min-height: 100%;
+    z-index: -2;
+    margin: 0px !important;
+    background: transparent url("../img/bg.jpg") no-repeat fixed center top / cover;
+}
+#login-wrapper {
+    margin: 50px auto 0px;
+    position: relative;
+    z-index: 5;
+}
+#logo-login {
+    background: rgba(48, 65, 96, 0.8) none repeat scroll 0% 0%;
+    border-radius: 3px 3px 0px 0px;
+    color: #FFF;
+    padding: 1px 0px 14px 25px;
+}
+#logo-login h1 {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: -1px;
+    text-decoration: inherit;
+    text-transform: uppercase;
+}
+#logo-login h1 span {
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0px 0px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-left: 0px;
+    padding: 0px 5px;
+    position: relative;
+    top: -3px;
+}
+.account-box {
+    border-radius: 0px 0px 4px 4px;
+    z-index: 3;
+    font-size: 13px !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #FFF;
+    padding: 20px;
+}

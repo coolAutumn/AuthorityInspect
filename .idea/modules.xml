@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AuthorityInspect.iml" filepath="$PROJECT_DIR$/AuthorityInspect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authinspect-client/authinspect-client.iml" filepath="$PROJECT_DIR$/authinspect-client/authinspect-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authinspect-srv/authinspect-srv.iml" filepath="$PROJECT_DIR$/authinspect-srv/authinspect-srv.iml" />
+    </modules>
+  </component>
+</project>
